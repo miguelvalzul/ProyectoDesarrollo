@@ -5,37 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pawstagram</title>
+    <link rel="stylesheet" href="/desarrollo/assets/css/styles.css">
 </head>
 
 <body>
     <header>
-        <h2>PAWSTAGRAM</h2>
+        
     </header>    
 
-    <form>
-        <div>
-            Usuario:
-            <input name = "user" value = "Usuario">
+
+
+    <div class="login-page">
+        <div class="form">
+            <img class="logo" src="/desarrollo/assets/img/feet-1459485_1920.png" alt="logo">
+            <h2>PAWSTAGRAM</h2>
+            <form action="/desarrollo/assets/pages/pagina_principal.html" class="register-form">
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                <input type="password" placeholder="Confirmar contraseña">
+                <!-- <button onclick="">Registrarse</button> -->
+                <input class="button" type="submit" value = "Registrarse">
+                <p class="message1">
+                    Al continuar, aceptas las <strong>Condiciones del servicio</strong>  y la <strong>Política de privacidad</strong>  de Pawstagram
+                </p>
+                <p class="message2">
+                    ¿Ya tienes una cuenta? 
+                    <a href="#">Inicia sesión</a>
+                </p>
+            </form>
+            <form action="/desarrollo/assets/pages/pagina_principal.html" class="login-form">
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
+                <!-- <button>Iniciar sesión</button> -->
+                <input class="button" type="submit" value = "Iniciar sesión">
+                <p class="message1">
+                    Al continuar, aceptas las <strong>Condiciones del servicio</strong> y la <strong>Política de privacidad</strong>  de Pawstagram
+                </p>
+                <p class="message2">
+                    ¿No tienes una cuenta? 
+                    <a href="#">Regístrate</a>
+                </p>
+            </form>
+            
+            
         </div>
-        <br>
-        <div>
-            Crear contraseña:
-            <input type="password">
-        </div>
-        <br>
-        <div>
-            Confirmar contraseña:
-            <input type="password">
-        </div>
-        <br>
-        <button id="myBtn" class="float-left submit-button" >Registrarse</button>
-    </form>
-    <div>
-        <span>Al continuar, aceptas las Condiciones del servicio y la Política de privacidad de Pawstagram</span>
+
     </div>
-    <div>
-        ¿Ya tienes una cuenta? 
-        <a href="inicio_sesion.html">Inicia sesión</a>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+
+    <script>    
+        $('.message2 a').click(function(){
+        $('form').animate({height:"toggle",opacity:"toggle"},"slow"); 
+        });
+    </script>
+    
 </body>
 </html>
