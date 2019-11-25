@@ -2,16 +2,11 @@
 
 let express = require('express');
 let bodyParser = require('body-parser');
-let user_routes = require("./routes/user")
 let app = express();
 
 // Cargar Rutas
 
-/* app.get('/', (req,res)=>{
-    res.status(200).send({
-        message: 'Hola Mundo'
-    });
-}); */
+let user_routes = require("./routes/user")
 
 // MidelWares
 app.use(bodyParser.urlencoded({extended:false}));
