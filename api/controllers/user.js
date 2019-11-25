@@ -77,7 +77,10 @@ function logIn(req,res){
                     return res.status(404).send({message:"El usuario o la contraseña son incorrectos"});
                 }
             });
+        }else{
+            return res.status(404).send({message:"El usuario o la contraseña son incorrectos"});
         }
+
     });
 
 }

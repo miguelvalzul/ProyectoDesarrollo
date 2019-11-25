@@ -13,3 +13,4 @@ api.post("/login", UserController.logIn);
 api.get("/getUser/:id",auth.auth,UserController.getUser);
 api.get("/getUsers/:page?", auth.auth, UserController.getUsers);
 module.exports = api;
+
